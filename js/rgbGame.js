@@ -114,7 +114,7 @@ function checkPickColor() {
         newColors.textContent = "Try Again?";
         newColors.classList.add("activeLevel");
     } else {
-        colorChoice("correct", "wrong", "Wrong, Picked: " + this.style.background + " Try Again!!!");
+        colorChoice("correct", "wrong", "Wrong, you picked: " + this.style.background );
         this.removeEventListener("click", checkSelMode);
         this.style.background = "rgb(41, 41, 37)";
     }
