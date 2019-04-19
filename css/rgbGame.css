@@ -1,0 +1,121 @@
+.top-bar {
+    height: 160px;
+    background: rgb(46, 105, 233);
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    position: relative;
+    padding-top: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.rgb {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    height: 30%;
+    margin: auto;
+    padding-top: 30px;
+}
+
+.new-colors, .float-button, .mode {
+    font-weight: bold;
+    height: 100%;
+    display: inline-block;
+}
+.mode {
+    padding: 0 2px;
+}
+
+.mid-bar {
+    height: 30px;
+    background: white;
+    color: rgb(46, 105, 233);
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+}
+
+.square {
+    float: left;
+    width: 30%;
+    background: rgb(41, 41, 37);
+    margin: 1.33%;
+    padding-bottom: 30%;
+    border-radius: 20px;
+    transition-duration: 1s;
+}
+
+.correct {
+    color: rgb(51, 158, 51);
+}
+
+.wrong {
+    color: rgb(226, 55, 55);
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    background: rgb(41, 41, 37);
+}
+
+.container {
+    width: 55%;
+    margin: 20px auto;
+}
+
+.container-fluid {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+}
+
+.activeLevel, .new-colors:hover {
+    background: rgb(46, 105, 233);
+    color: white;
+}
+
+.tip {
+    display: inline-block;
+    width: 280px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+@media(max-width: 720px) {
+    .top-bar {
+        font-size: 200%;
+    }
+    .rgb {
+        width: 70%;
+    }
+    .mid-bar {
+        font-size: 0.75rem;
+        height: 15px;
+    }
+    .tip {
+        width: 40% !important;
+        font-size: 0.8rem !important;
+    }
+
+    .container-fluid {
+        width: 90% !important;
+    }
+
+    .wrong {
+        font-size: 0.4rem !important;
+    }
+
+    .top-bar {
+        padding-top: 40px;
+    }
+}
