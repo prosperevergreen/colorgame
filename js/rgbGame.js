@@ -12,16 +12,20 @@ var level = mid;
 var squareArr = [];
 
 
-setColor(hard, "hide");
-randomPaintSquares(level);
 
-for (var i = 0; i < 9; i++) {
-    squares[i].addEventListener("click", checkPickColor);
-}
+init();
 
+function init() {
+    setColor(hard, "hide");
+    randomPaintSquares(level);
 
-for (var i = 0; i < modeLevel.length; i++) {
-    modeLevel[i].addEventListener("click", checkSelMode);
+    for (var i = 0; i < 9; i++) {
+        squares[i].addEventListener("click", checkPickColor);
+    }
+
+    for (var i = 0; i < modeLevel.length; i++) {
+        modeLevel[i].addEventListener("click", checkSelMode);
+    }
 }
 
 function setMode(newLevel) {
@@ -100,7 +104,7 @@ function getRandColor() {
     return color = "rgb(" + red + ", " + blue + ", " + green + ")";
 }
 
-function checkPickColor(){
+function checkPickColor() {
     if (this.style.background === rgbSpan.textContent) {
         for (var i = 0; i < level; i++) {
             squares[i].style.background = rgbSpan.textContent;
@@ -116,7 +120,7 @@ function checkPickColor(){
     }
 }
 
-function checkSelMode(){
+function checkSelMode() {
     for (var i = 0; i < modeLevel.length; i++) {
         modeLevel[i].classList.remove("activeLevel");
     }
