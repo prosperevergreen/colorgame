@@ -66,6 +66,7 @@ function colorChoice(removeColor, setColor, tip) {
 function randomPaintSquares(steps) {
     setColor(steps, "block");
     for (var i = 0; i < steps; i++) {
+        squares[i].addEventListener("click", checkPickColor);
         squares[i].style.background = squareArr[i].color;
         rgbSpan.textContent = squares[Math.round(Math.random() * (level - 1))].style.background;
     }
@@ -115,7 +116,7 @@ function checkPickColor() {
         newColors.classList.add("activeLevel");
     } else {
         colorChoice("correct", "wrong", "Wrong. Picked: " + this.style.background );
-        this.removeEventListener("click", checkSelMode);
+        this.removeEventListener("click", checkPickColor);
         this.style.background = "rgb(41, 41, 37)";
     }
 }
