@@ -115,6 +115,10 @@ body {
         font-size: 0.4rem !important;
     }
 
+    .correct {
+        font-size: 0.6rem !important;
+    }
+
     .top-bar {
         padding-top: 40px;
     }
